@@ -8,7 +8,7 @@ body {
     background-color: #fbfbfb;
     margin: 0;
     padding: 0;
-    overflow-y: hidden;
+    overflow: hidden;
     /* Hide vertical scrollbar */
 }
 
@@ -90,7 +90,7 @@ main {
 /* Remove extra left and right margins, due to padding */
 .row {
     margin: 10px 10px;
-    margin-left: 0%;
+    margin-right: 10%;
     align-items: center;
 }
 
@@ -110,42 +110,6 @@ main {
     }
 }
 
-/* Style the counter cards */
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    text-align: center;
-    background-color: #f1f1f1;
-}
-
-
-.idea-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 2rem;
-    animation: fadeIn 2s ease;
-    align-items: right;
-}
-
-/* Add colors and adjust fonts for the idea cards */
-.idea-card {
-    background-color: #ededed;
-    color: #333;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    text-align: center;
-    margin-bottom: 30px;
-    transition: all 600ms;
-    font-family: 'Font2', Georgia, 'Times New Roman';
-}
-
-.idea-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px #2404d757;
-}
-
 h2 {
     margin-top: 0;
     font-family: 'Poppins', sans-serif;
@@ -157,16 +121,23 @@ img {
     border-radius: 4px;
 }
 
-.idea-card project-card {
-    background-color: #41b691;
-    color: #333;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    text-align: center;
-    margin-bottom: 10px;
-    font-family: 'Font2', Georgia, 'Times New Roman';
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .company-motive {
@@ -197,6 +168,35 @@ img {
     height: auto;
     border-radius: 15px;
     box-shadow: 0 2px 4px rgba(252, 252, 252, 0.1);
+}
+
+/* Adjust company motive section for better alignment and fit */
+@media screen and (max-width: 600px) {
+    .company-motive {
+        flex-direction: column-reverse;
+        /* Stack image below text on mobile */
+        padding: 1rem;
+        /* Adjust padding for better spacing */
+    }
+
+    .motive-text {
+        text-align: center;
+        margin: 0;
+    }
+
+    .motive-image {
+        justify-content: center;
+    }
+
+    .motive-image img {
+        width: 100%;
+        /* Make the image width 100% */
+        max-height: 200px;
+        /* Limit the image height for consistency */
+        border-radius: 8px;
+        margin-top: 1rem;
+        /* Add margin for separation */
+    }
 }
 
 /* Existing styles remain unchanged */
@@ -234,32 +234,35 @@ main {
     scroll-behavior: smooth;
 }
 
-/* Add styles for the footer */
 footer {
-    height: 200px;
+    height: 310px;
     padding: 20px 0;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-footer {
     background-color: #094c78;
     color: #fff;
     text-align: center;
-
-
-    padding: 40px 0;
+    width: 100%;
 }
 
 .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        /* Stack items vertically on smaller screens */
+    }
+
+    .fa {
+        margin: 10px 0;
+        /* Adjust margin for better spacing */
+    }
 }
 
 .fa {
@@ -331,10 +334,18 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 2rem;
     text-align: center;
-    max-width: 1200px;
+    max-width: 1400px;
+    margin-right: 10%;
     width: 100%;
-    margin-left: 7%;
     font-family: 'Poppins', sans-serif;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+    .card-container {
+        padding: 1rem;
+        /* Adjust padding for smaller screens */
+    }
 }
 
 @keyframes slideInFromLeft {
