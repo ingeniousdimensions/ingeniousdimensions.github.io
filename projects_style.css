@@ -5,16 +5,23 @@
 /* Apply advanced fonts to different elements */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #fbfbfb;
+    background-color: #efeeee;
     margin: 0;
     padding: 0;
     overflow-y: hidden;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer and Edge */
     /* Hide vertical scrollbar */
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
 
 header {
-    background-color: #1b79b7;
+    background-color: #65adde;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
@@ -31,8 +38,17 @@ h1 {
 h3 {
     margin: 0;
     font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     /* Apply Roboto font to h3 */
+}
+
+.section-heading {
+    font-size: 28px;
+    margin-bottom: 1rem;
+    color: #1b79b7;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
 }
 
 nav {
@@ -82,7 +98,8 @@ main {
 
 .column {
     float: left;
-    width: 47%;
+    width: 30%;
+    margin-left: 15px;
     padding: 0 15px;
 
 }
@@ -106,7 +123,6 @@ main {
     .column {
         width: 100%;
         display: block;
-        margin-bottom: 50px;
     }
 }
 
@@ -116,6 +132,7 @@ main {
     padding: 20px;
     text-align: center;
     background-color: #f1f1f1;
+    margin-right: -20%;
 }
 
 
@@ -130,43 +147,33 @@ main {
 
 /* Add colors and adjust fonts for the idea cards */
 .idea-card {
-    background-color: #ededed;
+
+    background-color: #ffffff;
     color: #333;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     text-align: center;
-    margin-bottom: 30px;
     transition: all 600ms;
     font-family: 'Font2', Georgia, 'Times New Roman';
 }
 
-.idea-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px #2404d757;
-}
-
 @media screen and (max-width: 600px) {
     .idea-card {
-        width: 85%;
+        width: 90%;
         /* Make the card full width on mobile */
         padding: 1rem;
         font-size: 14px;
     }
 
-    .motive-text {
-        margin-bottom: 0;
-        /* Reduce margin to save space on mobile */
-    }
 
-    .motive-image {
-        justify-content: center;
-    }
-
-    .motive-image img {
-        border-radius: 8px;
-    }
 }
+
+.idea-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 1px #2404d757;
+}
+
 h2 {
     margin-top: 0;
     font-family: 'Poppins', sans-serif;
@@ -179,7 +186,7 @@ img {
 }
 
 .idea-card project-card {
-    background-color: #41b691;
+    background-color: #000000;
     color: #333;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -220,13 +227,41 @@ img {
     box-shadow: 0 2px 4px rgba(252, 252, 252, 0.1);
 }
 
+/* Adjust company motive section for better alignment and fit */
+@media screen and (max-width: 600px) {
+    .company-motive {
+        flex-direction: column-reverse;
+        /* Stack image below text on mobile */
+        padding: 1rem;
+        /* Adjust padding for better spacing */
+    }
+
+    .motive-text {
+        text-align: center;
+        margin: 0;
+    }
+
+    .motive-image {
+        justify-content: center;
+    }
+
+    .motive-image img {
+        width: 100%;
+        /* Make the image width 100% */
+        max-height: 200px;
+        /* Limit the image height for consistency */
+        border-radius: 8px;
+        margin-top: 1rem;
+        /* Add margin for separation */
+    }
+}
+
 /* Existing styles remain unchanged */
 
 /* Existing styles remain unchanged */
 
 .project-info {
     display: none;
-    margin-top: 20px;
 }
 
 .project-info.show {
@@ -255,33 +290,24 @@ main {
     scroll-behavior: smooth;
 }
 
-/* Add styles for the footer */
-footer {
-    height: 200px;
-    padding: 20px 0;
-    width:100%
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 footer {
     background-color: #094c78;
     color: #fff;
     text-align: center;
-
-
+    width: 100%;
     padding: 40px 0;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-wrap: wrap;
+    /* Allow content to wrap on smaller screens */
+    justify-content: center;
+    /* Center content horizontally */
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
+    /* Center text within each item */
 }
 
 .fa {
@@ -347,17 +373,7 @@ section {
     list-style: disc;
 }
 
-.card-container {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    text-align: center;
-    max-width: 1200px;
-    width: 100%;
-    margin-left: 7%;
-    font-family: 'Poppins', sans-serif;
-}
+
 
 @keyframes slideInFromLeft {
     0% {
@@ -381,25 +397,11 @@ section {
     }
 }
 
-.container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    animation: slideInFromLeft 2s ease 0s 1;
-    font-family: 'Font2', sans-serif;
-}
 
-.container img {
-    animation: fadeIn 1s ease-in 0s;
-}
 
 h1 {
     font-size: 31px;
     color: #1f64c4;
-    margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -407,10 +409,9 @@ p {
     font-size: 15px;
     line-height: 1.5;
     color: #333333;
-    margin-bottom: 20px;
     text-align: justify;
     animation: slideInFromLeft 2s ease 0s 1;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .intro-paragraph {
