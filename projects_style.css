@@ -146,6 +146,27 @@ main {
     box-shadow: 0 8px 12px #2404d757;
 }
 
+@media screen and (max-width: 600px) {
+    .idea-card {
+        width: 85%;
+        /* Make the card full width on mobile */
+        padding: 1rem;
+        font-size: 14px;
+    }
+
+    .motive-text {
+        margin-bottom: 0;
+        /* Reduce margin to save space on mobile */
+    }
+
+    .motive-image {
+        justify-content: center;
+    }
+
+    .motive-image img {
+        border-radius: 8px;
+    }
+}
 h2 {
     margin-top: 0;
     font-family: 'Poppins', sans-serif;
@@ -238,6 +259,7 @@ main {
 footer {
     height: 200px;
     padding: 20px 0;
+    width:100%
 }
 
 .footer-content {
