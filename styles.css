@@ -160,7 +160,7 @@ main {
 
 @media screen and (max-width: 600px) {
     .idea-card {
-        width: 90%;
+        width: 80%;
         /* Make the card full width on mobile */
         padding: 1rem;
         font-size: 14px;
