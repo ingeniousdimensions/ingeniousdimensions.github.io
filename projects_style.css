@@ -12,9 +12,8 @@ body {
     /* Hide vertical scrollbar */
 }
 
-
 header {
-    background-color: #1b79b7;
+    background-color: #65adde;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
@@ -121,22 +120,34 @@ img {
     border-radius: 4px;
 }
 
+/* Add colors and adjust fonts for the idea cards */
+.idea-card {
+
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: all 600ms;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    .idea-card {
+        width: 85%;
+        /* Make the card full width on mobile */
+        padding: 1rem;
+        font-size: 14px;
+    }
 
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.idea-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 1px #2404d757;
+}
 
 
 
