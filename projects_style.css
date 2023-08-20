@@ -249,7 +249,7 @@ main {
 }
 
 footer {
-    height: 310px;
+    height: 350px;
     padding: 20px 0;
     background-color: #094c78;
     color: #fff;
@@ -270,6 +270,7 @@ footer {
 @media screen and (max-width: 600px) {
     .footer-content {
         flex-direction: column;
+        margin-bottom:15%;
         /* Stack items vertically on smaller screens */
     }
 
